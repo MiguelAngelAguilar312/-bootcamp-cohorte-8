@@ -1,0 +1,18 @@
+body{
+    background-color: cadetblue;
+}
+.resaltar{
+    color: red;
+}
+.title{
+    text-align: right;
+    font-size: 39px;
+}
+.naranja{
+    color: orangered;
+}
+.fondoblanco{
+    background-color: white;
+    color: green;
+    font-style: italic;
+}

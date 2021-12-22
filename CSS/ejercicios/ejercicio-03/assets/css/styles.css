@@ -1,0 +1,53 @@
+body{
+    background-color: forestgreen;
+    text-shadow:black;
+    font-size: 60px;
+}
+.title{
+    color: white;
+    text-shadow: 20px 20px black;
+    font-size: 100px;
+}
+p{
+    width: 1500px;
+    height: 200px;
+    border: 100px;
+}
+.parrafo-01{
+    background-color: white;
+    border: 25px solid black;
+    border-radius: 30px;
+    margin-left: 850px;
+    margin-bottom: 30px;
+    padding: 10px;
+}
+.parrafo-02{
+    color: white;
+    background-color: chocolate;
+    border: 25px solid maroon;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    margin-right: 200px;
+    margin-bottom: 30px;
+    padding: 10px;
+}
+.parrafo-03{
+    color: white;
+    background-color: rgb(165, 108, 42);
+    border: 25px solid rgb(255, 153, 0);
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    margin-left: 1500px;
+    margin-bottom: 15px;
+    padding: 10px;
+}
+.parrafo-04{
+    color: white;
+    background-color: rgb(33, 33, 126);
+    border: 25px dashed dodgerblue;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    margin-left: 850px;
+    margin-bottom: 30px;
+    padding: 10px;
+}

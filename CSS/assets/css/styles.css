@@ -1,0 +1,39 @@
+/* Comentarios en css*/
+/*Selector de clases es .encabezado por ejemplo*/
+.encabezado{
+    /*font-size cambia el tamaña de la fuente siendo las medidas mas comunes: px, %, in y cm*/
+    font-size: 72px;
+    /*Cambia el tono de la fuente*/
+    color: cadetblue;
+    /* background-color es para cambiar el color del fondo*/
+    background-color: gold;
+    /* text-align: nos permite alinear el texto*/
+    text-align: center;
+    /* text-align: nos permite convertir todo el texto en mayusculas con upercase, lowercase convierte el texto en mimnuscula, capitalize nos convierte la primera letra de cada palabra en mayusculas*/
+    text-transform: lowercase
+}
+/* Selector de etiquetas por ejemplo boddy*/
+body {
+    background-color: #e1e1e1;
+}
+#texto-01{
+    color: white;
+    background-color: red;
+    font-size: 24px;
+    font-style: italic;
+}
+.texto{
+    color: white;
+    background-color: black;
+}
+p {
+    color: white;
+    background-color: dimgray;
+}
+p {
+    color: yellow;
+    background-color:teal;
+
+}
+
+ 

@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,400;1,300;1,400;1,700&family=Moon+Dance&display=swap');
+
+h1{
+    font-family: 'Comic Neue', cursive;
+    font-weight: 700;
+    font-size: 50px;
+    color: crimson;
+} 
+
+/*p{
+    font-family: 'Comic Neue', cursive;
+    font-weight: 400;
+    font-size: 30px;
+}*/
+
+p{
+    font-family: 'Moon Dance', cursive;
+    font-size: 40px;
+    font-weight: 700;
+    color: brown;
+}
+body{
+    background-color: aqua;
+}

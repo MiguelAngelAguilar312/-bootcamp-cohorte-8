@@ -1,0 +1,49 @@
+body{
+    background-color: goldenrod;
+    margin: 0;
+    padding: 0;
+}
+/* Header - Estilo para la barra de Menu*/
+.menu{
+    background-color: salmon;
+    height: 50px;
+}
+.menu ul{
+    width: 800px;
+    margin: 0 auto;
+}
+.menu .elemento{
+    display: inline;
+    margin: 0 20px;
+    padding: 15px;
+}
+/*.menu .elemento:hover {
+    background-color:  springgreen;
+}*/
+.elemento a{
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+    line-height: 50px;
+    font-family: 'Pacifico', cursive;
+    transition: color 0.3s;
+    /*transform: scale(1,2);*/
+}
+.elemento a:hover {
+    color: gray;
+    font-size: 30px;
+}
+/* Main */
+p{
+    font-family: 'Permanent Marker', cursive;
+    color:white;
+    font-size: 30px; 
+    width: 0 auto;
+    height: 0 auto;
+    text-align: right;
+}
+.texto{
+    width: 30px;
+    height: 50px;
+    display: inline;
+}

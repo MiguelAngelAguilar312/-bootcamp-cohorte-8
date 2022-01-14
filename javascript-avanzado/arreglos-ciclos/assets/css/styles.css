@@ -1,0 +1,12 @@
+body{
+    background-color: tomato;
+    color: white;
+    font-size: 30px;
+    text-shadow: 1px 1px rgb(0, 0, 0);
+}
+h1{
+    color: white;
+    text-align: center;
+    font-size: 80px;
+    text-shadow:5px 5px  rgb(22, 22, 22);
+}

@@ -1,0 +1,9 @@
+body{
+    background-color: olivedrab;
+}
+h1{
+    text-align: center;
+    color: palegoldenrod;
+    text-shadow: 2px 2px sienna;
+    font-size: 35px;
+}

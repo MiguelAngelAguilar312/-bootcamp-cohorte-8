@@ -1,0 +1,9 @@
+body{
+    background-color: darkturquoise;
+}
+h1{
+    color: palevioletred;
+    text-align: center;
+    text-shadow: 2px 2px white;
+    font-size: 35px;
+}

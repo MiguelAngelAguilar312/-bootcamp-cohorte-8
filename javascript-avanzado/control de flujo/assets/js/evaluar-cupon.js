@@ -10,27 +10,53 @@ Platino se le hará el descuento del 25%
 -También debe mostrar el mensaje "El cupón no es válido" en caso de que sea un cupón equivocado 
 */
 
-let precio = parseInt(prompt('Costo total'));
-let cuponDescuento = parseInt(prompt('¿Que cupon tienes?'));
-let descuento;
-
-switch(cuponDescuento){
-    case 'Bronce':
-        descuento = 5;
-    break;
-    case 'Plata':
-        descuento = (precio*0.10);
-    break;
-    case 'Oro':
-        descuento = (precio*0.15);
-    break;
-    case 'Platino':
-        descuento = (precio*0.25);
-    break;
-    default:
-        console.log('Cupon pirata');
-    break;
+function enterTicket() {
+    let totalPrice = parseInt(document.getElementById('price').value);
+    
+    if (isNaN(totalPrice)){
+        alert("Ese no es un precio válido");
+    }
+    else {
+        let tktdiv = document.getElementById('tkt-div');
+        tktdiv.innerHTML = `
+        <label for="discount">Cupón:</label>
+        <input type="text" name="discount" id="discount" placeholder="Ingresa el ticket">
+        <input id="dnt-btn" type="button" value="Pagar" onclick="showPrices();">`;
+    }
 }
 
-document.write(`El costo total es  ${precio} y  el descuento es ${descuento} <br>`);
-console.log(descuento);
+function showPrices() {
+    let prices = document.getElementById('prices');
+    let totalPrice = parseInt(document.getElementById('price').value);
+    let ticket = document.getElementById('discount').value;
+    let descuento;
+
+    switch(ticket) {
+        case "Bronce":
+            descuento = 5;
+            break;
+        case "Plata":
+            descuento = 10;
+            break;
+        case "Oro":
+            descuento = 20;
+            break;
+        case "Platino":
+            descuento = 25;
+            break;
+        default:
+            descuento = 0;
+    }
+
+    let totalDiscount = totalPrice - totalPrice*descuento/100;
+
+    if (descuento == 0){
+        prices.innerHTML = '';
+        alert('El cupón no es válido');
+    }
+    else {
+        prices.innerHTML = `<p class="results">Precio total: $${totalPrice}</p>
+                            <p class="results">Precio con descuento: $${totalDiscount}</p>`;
+    }
+    
+}

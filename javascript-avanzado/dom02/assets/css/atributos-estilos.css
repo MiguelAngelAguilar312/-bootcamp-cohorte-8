@@ -1,0 +1,17 @@
+body{
+    background-color: coral;
+}
+h1{
+    color: darkgray;
+    text-align: center;
+    text-shadow: 2px 2px black;
+}
+.bg-purple {
+    background-color: purple;
+}
+.h3{
+    font-size:  36px;
+}
+.text-center{
+    text-align: center;
+}

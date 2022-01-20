@@ -1,0 +1,9 @@
+body{
+    background-color: chartreuse;
+    color: tomato;
+}
+h1{
+    text-align: center;
+    text-shadow: 2px 2px black;
+    color: deeppink;
+}

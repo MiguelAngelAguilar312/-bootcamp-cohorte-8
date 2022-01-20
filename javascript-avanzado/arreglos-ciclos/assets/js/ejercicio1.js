@@ -1,16 +1,24 @@
-/* Crear un arreglo con 20 numeros Mostrar en HTML
-hacer la suma de dichos numeros y el promedio */
+/* 
+    Crear un arreglo con 20 números. Mostrar en HTML la suma de dichos números y el promedio.
+*/
 
-let numeros = [8, 9, 7, 9, 10, 6, 8, 7, 8, 8, 9, 10, 6, 5, 9, 7, 8, 8, 9, 10, 8, 9];
+let array = new Array();
+let show = document.getElementById('show');
+let suma = document.getElementById('suma');
+let promedio = document.getElementById('promedio');
 
-let sumaArreglo = 0;
+function getArray() {
+    for (let i=0; i<20; i++) {
+        array[i] = parseInt(Math.random()*100);
+    }
 
-for (let i = 0; i < numeros.length ; i++) {
-    sumaArreglo += numeros[i]; 
-};
+    const sum = array.reduce((total, value) => total + value, 0);
 
-document.write ('<br>' + 'Esta es la suma de las calificaciones del grupo ' + sumaArreglo + '<br>'); 
+    const prom = sum / array.length;
 
-let promedio = sumaArreglo / numeros.length;
+    show.textContent = `Arreglo: ${array}`;
+    suma.textContent = `Suma del arreglo: ${sum}`;
+    promedio.textContent = `Promedio del arreglo ${prom}`;
+}
 
-document.write ('<br>' + 'Este es el promedio de las calificaciones del grupo ' + promedio + '<br>');
+getArray();

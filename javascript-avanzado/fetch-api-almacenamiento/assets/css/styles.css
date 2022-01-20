@@ -1,0 +1,8 @@
+body{
+    background-color: tomato;
+}
+h1{
+    text-align: center;
+    text-shadow: 2px 1px black;
+    color: firebrick;
+}

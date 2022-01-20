@@ -1,80 +1,81 @@
 let numeros = [1, 3, 13, 23, 532, 328, 123, 6865, 812, 213, 123];
 
-/*numeros.forEach(elemento, => {
-    document.write(elemento + ', ');
-});*/
-
-/*numeros.forEach( function (elemento, indice) {
-    document.write(elemento + '-' + indice + '</br>');
-});*/
-
-numeros.forEach( function (elemento) {
-    document.write(elemento + ', ');
-});
-
-
-//-------------------------------------------------------------------------------------------
-
-let numeros2 = numeros.map( function(elemento) {
-    return elemento * 1.15;
+                        // i, index, array
+numeros.forEach(function(elemento, indice, arreglo) {
+    /* document.write(el + ', '); */
+    document.write(elemento + '-' + indice + '<br>');
+    /* document.write(arreglo); */
 })
 
-document.write('<br>' +  numeros2  + '<br>');
+let frutas = ['mango', 'uva', 'piña'];
+// apunta a la misma dirección de memoria
+let frutas2 = frutas;
 
-//-------------------------------------------------------------------------------------------
+document.write('<br>' + frutas);
+document.write('<br>' + frutas2 + '<br>');
 
-/*let frutas = ['mango', 'uva', 'piña'];
-let frutas2 = frutas.map(function(elemento) { 
+// se anexa el valor a ambos arreglos
+frutas2.push('pera');
+document.write('<br>' + frutas);
+document.write('<br>' + frutas2 + '<br>');
+
+document.write('<br>');
+let frutas3 = ['mango', 'uva', 'piña'];
+// Copiar el arreglo en uno nuevo
+let frutas4 = frutas3.map(function(elemento) {
     return elemento;
 });
 
-document.write('<br>' + frutas + '<br>');
-document.write('<br>' + frutas2 + '<br>');
+document.write('<br>' + frutas3);
+document.write('<br>' + frutas4 + '<br>');
 
-frutas2.push('pera');
-document.write('<br>' + frutas + '<br>');
-document.write('<br>' + frutas2 + '<br>');*/
+// se anexa el valor solo al segundo arreglo
+frutas4.push('pera');
+document.write('<br>' + frutas3);
+document.write('<br>' + frutas4 + '<br>');
 
-//--------------------------------------------------------------------
+/* .includes() -------------------- */
+document.write('<br><h3>.includes()</h3>');
+document.write(`numeros ${numeros.includes('hola') ? "sí" : "no"} incluye "hola"`);
+document.write(`<br>numeros ${+ numeros.includes(328) ? "sí" : "no"} incluye 328<br>`);
 
-/* Includes */
-
-document.write( '<br>' + numeros.includes('hola') + '<br>');
-
-//---------------------------------------------------------------------
-
-/* Filter */
-
-let numerosPares = numeros.filter((elemento) => {
-    /*if( elemento % 2 == 0) {
-        return true;
-    } else {
-        return false
-    }*/
-    
-    //console.log(elemento % 2 == 0);
-
-    //return elemento % 2 == 0;
-
-    if(elemento > 10) {
-        return true;
+/* Funcionamiento:
+let numerosPares = numeros.filter(num => {
+    if (num % 2 === 0) {
+        return true; // agregar elemento al arreglo
     }
-});
+    else {
+        return false; // no agregar elemento al arreglo
+    }
+}); 
+*/
 
-document.write('<br>' + numerosPares + '<br>');
+frutas = ['Mango', 'uva', 'piña', 'mandarina', 'manzana', 'aguacate'];
 
-let frutas = ['Mango', 'Uva', 'Piña', 'Mandarina', 'Manzana', 'Aguacate', 'Sandia', 'Melon', 'Kiwi', 'Platano'];
+let numerosPares = numeros.filter(num => num % 2 === 0);
+document.write('<br>Números pares: ' + numerosPares + '<br>');
 
-let frutasFiltro = frutas.filter((fruta) => {
-    /*if(fruta.includes('z') == true ) {
-        return true;
-    }*/
+let frutasFilto = frutas.filter(fruta => fruta.toLowerCase().includes('i'));
+document.write('<br>Frutas que incluyen "i": ' + frutasFilto);
+let frutasFilto2 = frutas.filter(fruta => fruta.includes('M' || 'm'));
+document.write('<br>Frutas que incluyen "m": ' + frutasFilto2);
 
-    /* Mango toLowerCase mango.include('m'); */
-    /* mango toUperCase Mango.include('M') */
+/* .sort() -------------------- */
+document.write('<br><h3>.sort()</h3>');
+let otrosNumeros = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+document.write(otrosNumeros.sort() + '<br>');
+document.write('<br>Sin parámetros, .sort() ordena los elementos de acuerdo con su primer item: ' + numeros.sort());
+document.write('<br>Ordenar los elementos de menor a mayor: ' + numeros.sort((a,b) => {return a-b}));
+document.write('<br>Ordenar los elementos de mayor a menor: ' + numeros.sort((a,b) => {return b-a}));
 
-    return fruta.toLowerCase().includes('m');
+/* Reverse invierte el orden de los elementos de un arreglo */
+document.write('<br>' + numeros.reverse() + '<br>');
 
-});
-
-document.write('<br>' + frutasFiltro + '<br>');
+/* .find() -------------------- */
+/* 
+    Parecido al filter. Busca un elemento que cumple una condición
+    o uno específico. Sólo devuelve un elemento, el primero que encuentre
+ */
+    document.write('<br><h3>.find()</h3>');
+let frutaEncontrada = frutas.find(el => el.includes('ma'));
+document.write(frutaEncontrada + '<br>');

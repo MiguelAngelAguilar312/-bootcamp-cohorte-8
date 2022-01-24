@@ -24,6 +24,16 @@ class Pikachu extends Pokemon{
 
 }
 
+class Electrico extends Pikachu{
+    constructor (nombre , tipo, edad, color){
+        super(nombre, tipo, edad);
+        this.color = color;
+    }
+}
+
+const Electrico1 = new Electrico('Panchito', 'Electrico', 4, 'Gris');
+console.log(Electrico1);
+
 const Pikachu1 = new Pikachu("Juan", "Eléctrico", 3); //Pertenece a la clase Pikachu
 console.log(Pikachu1); 
 Pikachu1.atacar();

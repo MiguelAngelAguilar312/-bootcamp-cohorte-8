@@ -87,3 +87,4 @@ Animal1.setNombre = "Manchas";
 console.log(Animal1.getNombre);
 console.log(Animal1);
 /* Animal1.saludar(); */
+
